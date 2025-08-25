@@ -50,10 +50,7 @@ app.get("/api/:date", (req, res) => {
 
     //check if date is valid
     if (date.toString() === "Invalid Date") {
-        return res.status(400).json({
-            status: "error",
-            message: "Invalid date"
-        });
+        return res.status(400).json({ error: "Invalid date" });
     }
 
 
